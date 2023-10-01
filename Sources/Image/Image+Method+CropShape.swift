@@ -5,7 +5,7 @@
  Created by: Egor Boyko
  Date: 20.05.2023
  
-*/
+ */
 
 import SwiftUI
 
@@ -15,7 +15,7 @@ extension Image {
             self
                 .resizable()
                 .aspectRatio(contentMode: contentMode)
-
+            
         }
     }
 }

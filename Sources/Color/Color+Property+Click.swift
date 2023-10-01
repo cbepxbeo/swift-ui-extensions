@@ -5,7 +5,7 @@
  Created by: Egor Boyko
  Date: 20.05.2023
  
-*/
+ */
 
 import SwiftUI
 
