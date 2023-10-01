@@ -5,7 +5,7 @@
  Created by: Egor Boyko
  Date: 20.05.2023
  
-*/
+ */
 
 import SwiftUI
 
@@ -17,10 +17,10 @@ public struct CroppedImage<S: Shape, I: View>: View {
         return temp
     }
     
-    internal let shape: () -> S
-    internal let image: () -> I
-    internal var width: CGFloat? = nil
-    internal var height: CGFloat? = nil
+    let shape: () -> S
+    let image: () -> I
+    var width: CGFloat? = nil
+    var height: CGFloat? = nil
     
     public var body: some View {
         Group{
