@@ -12,16 +12,15 @@ import SwiftUI
 public struct SwipeModifier: ViewModifier {
     
     public enum Direction {
-        case none, left, right, up, down
+        case left, right, up, down
     }
     
-    
-    public init(drag: Binding<Direction>, distance: CGFloat = 50){
+    public init(drag: Binding<Direction?>, distance: CGFloat = 50){
         self._drag = drag
         self.distance = distance < 30 ? 30 : distance
     }
     
-    @Binding var drag: Direction
+    @Binding var drag: SwipeModifier.Direction?
     private let distance: CGFloat
     private var minimum: CGFloat { distance - 1 }
     
@@ -47,7 +46,7 @@ public struct SwipeModifier: ViewModifier {
                     self.gesture(value: $0)
                 }
                 .onEnded{ _ in
-                    drag = .none
+                    drag = nil
                 }
             )
     }
